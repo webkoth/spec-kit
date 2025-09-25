@@ -71,7 +71,17 @@ uvx --from git+https://github.com/github/spec-kit.git specify init <PROJECT_NAME
 - Better tool management with `uv tool list`, `uv tool upgrade`, `uv tool uninstall`
 - Cleaner shell configuration
 
-### 2. Establish project principles
+### 2. (Optional) Start with Discovery
+
+For new product ideas, use the **`/discovery`** command to analyze and structure your concept before diving into detailed specifications.
+
+```bash
+/discovery --idea "Task management with AI assistance" --problem "Teams waste time on manual prioritization and context switching" --audience "Software development teams" --domain "productivity"
+```
+
+This generates a comprehensive Discovery document that includes problem analysis, user personas, MVP scope, success metrics, and competitive landscape.
+
+### 3. Establish project principles
 
 Use the **`/constitution`** command to create your project's governing principles and development guidelines that will guide all subsequent development.
 
@@ -79,7 +89,7 @@ Use the **`/constitution`** command to create your project's governing principle
 /constitution Create principles focused on code quality, testing standards, user experience consistency, and performance requirements
 ```
 
-### 3. Create the spec
+### 4. Create the spec
 
 Use the **`/specify`** command to describe what you want to build. Focus on the **what** and **why**, not the tech stack.
 
@@ -87,7 +97,7 @@ Use the **`/specify`** command to describe what you want to build. Focus on the 
 /specify Build an application that can help me organize my photos in separate photo albums. Albums are grouped by date and can be re-organized by dragging and dropping on the main page. Albums are never in other nested albums. Within each album, photos are previewed in a tile-like interface.
 ```
 
-### 4. Create a technical implementation plan
+### 5. Create a technical implementation plan
 
 Use the **`/plan`** command to provide your tech stack and architecture choices.
 
@@ -95,7 +105,7 @@ Use the **`/plan`** command to provide your tech stack and architecture choices.
 /plan The application uses Vite with minimal number of libraries. Use vanilla HTML, CSS, and JavaScript as much as possible. Images are not uploaded anywhere and metadata is stored in a local SQLite database.
 ```
 
-### 5. Break down into tasks
+### 6. Break down into tasks
 
 Use **`/tasks`** to create an actionable task list from your implementation plan.
 
@@ -103,7 +113,7 @@ Use **`/tasks`** to create an actionable task list from your implementation plan
 /tasks
 ```
 
-### 6. Execute implementation
+### 7. Execute implementation
 
 Use **`/implement`** to execute all tasks and build your feature according to the plan.
 
@@ -204,6 +214,7 @@ After running `specify init`, your AI coding agent will have access to these sla
 
 | Command         | Description                                                           |
 |-----------------|-----------------------------------------------------------------------|
+| `/discovery`    | **NEW** Generate Discovery document to analyze product ideas and create foundation for development pipeline |
 | `/constitution` | Create or update project governing principles and development guidelines |
 | `/specify`      | Define what you want to build (requirements and user stories)        |
 | `/clarify`      | Clarify underspecified areas (must be run before `/plan` unless explicitly skipped; formerly `/quizme`) |
